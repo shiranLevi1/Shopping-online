@@ -1,0 +1,68 @@
+.product-card{
+    display: inline-block;
+    width: 200px;
+    padding: 2%;
+    padding-bottom: 5%;
+    background-color: white;
+}
+
+.edit-product{
+    text-align: end;
+    cursor: pointer;
+    color: blue;
+    margin-right: 2%;
+}
+
+.img{
+    border-bottom: 1px solid rgb(196, 194, 194);
+    height: 100px;
+    margin-bottom: 3%;
+}
+
+.product-price{
+    font-weight: 600;
+    text-align: start;
+    margin-left: 6%;
+    margin-top: 1rem;
+}
+
+.description{
+    font-size: smaller;
+    color: gray;
+}
+
+.description-div{
+    text-align: start;
+    margin-left: 5%;
+    letter-spacing: 1px;
+}
+
+.name{
+    text-align: start;
+    margin-top: 1rem;
+    margin-left: 5%;
+    letter-spacing: 1px;
+}
+
+.btn{
+    margin-right: 5%;
+    margin-top: 3%;
+    text-align: end;
+}
+
+
+button{
+    background-color: rgb(204, 204, 204);
+    border: none;       
+    padding: 2% 3% 2% 3%;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+button:hover{
+    background-color: rgb(221, 221, 219);
+}
+
+button:active{
+    background-color: rgb(139, 139, 139);
+}

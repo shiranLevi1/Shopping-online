@@ -1,0 +1,19 @@
+<div class="page">
+    <div class="header">
+        <h3>It's Ordered!</h3>
+    </div>
+    <div class="text">
+        <span>Your order has been received.</span><br />
+    </div>
+    <div class="order-details-div">
+        <div class="order-details">
+            <span class="bold-text">Order No.: </span><span>{{orderDetails.orderId}} </span>
+            <span class="bold-text">Order Date: </span><span>{{orderDetails.orderDate}} </span>
+        </div>
+        <button class="download-btn" (click)="onDownloadReceiptClicked()">Download your receipt</button>
+    </div>
+    <div class="btns">
+        <button (click)="onMyOrderClicked()">My Orders</button>
+        <button (click)="onContinueShoppingClicked()">Continue Shopping</button>
+    </div>
+</div>

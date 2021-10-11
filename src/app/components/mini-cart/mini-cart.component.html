@@ -1,0 +1,28 @@
+<div class="mini-cart">
+    <div class="mini-cart-container">
+        <h3>My Cart</h3>
+        <div class="container">
+            <div class="product-card" *ngFor="let cartProduct of stateService.cart">
+                <div class="image">
+                    <img src="{{stateService.server}}{{cartProduct.image}}" />
+                </div>
+                <div class="product-details">
+                    <div class="top">
+                        <div class="price">{{cartProduct.totalPrice}} ₪</div>
+                        <span class="delete-btn" (click)="onRemoveItemClicked(cartProduct.productId)">X</span>
+                    </div>
+                    <div class="name">{{cartProduct.productName}}</div>
+                    <div class="description">{{cartProduct.description}}</div>
+                    <span class="qty">Qty: </span><span>{{cartProduct.amount}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="total-price">
+            <span>Total Price: </span><span>{{stateService.totalPrice}} ₪</span><br />
+        </div>
+        <div class="btns">
+            <button (click)="onToCartClicked()">View Cart</button>
+            <button (click)="onClearCartClicked()">Clear Cart</button>
+        </div>
+    </div>
+</div>

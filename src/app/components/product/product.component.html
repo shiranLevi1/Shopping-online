@@ -1,0 +1,22 @@
+<div class="product-card">
+    <div class="edit-product">
+        <span *ngIf="stateService.isAdmin" (click)="onEditClicked(product)">Edit</span>
+    </div>
+    <div class="img">
+        <img src="{{stateService.server}}{{product.image}}" width="100px" />
+    </div>
+    <div class="name">
+        <span class="product-name">{{product.name}}</span>
+    </div>
+    <div class="description-div">
+        <span class="description">{{product.description}}</span>
+    </div>
+    <div class="product-price">
+        <span>{{product.price}} ₪</span><br />
+    </div>
+    <div class="btn">
+        <button *ngIf="stateService.isLoggedIn && !isAddToCartClicked && !stateService.isAdmin"
+            (click)="onAddToCartClicked(product)">
+            Add to cart</button>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="about-us">
+    <h3>Why you shoud buy from us:</h3>
+
+    <li>Customer friendly e-commerce website to securely purchase items online.</li>
+    <li>Customers save time and money buying from shopping online.</li>
+    <li>Our store provides exceptional and extraordinary customer service with attention to detail.</li>
+    <li>Items offered at best possible prices.</li>
+    <li>Free gift wrapping & personalised service.</li>
+
+    <div class="info-div">
+        <span class="info">Number products in our store: </span><span class="inner-info">{{stateService.products.length}}</span><br/>
+        <span class="info">Number of purchases: </span><span class="inner-info">{{numberOfOrders}}</span>
+    </div>
+
+    <button *ngIf="stateService.isLoggedIn">Start Shopping</button>
+
+</div>

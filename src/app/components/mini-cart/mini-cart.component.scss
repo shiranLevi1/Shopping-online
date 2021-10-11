@@ -1,0 +1,141 @@
+.mini-cart{
+    display: flex;
+    justify-content: right;
+    margin-right: 2%;
+    animation: ease 1s;
+}
+
+h3{
+    letter-spacing: 1px;
+}
+
+.mini-cart-container{
+    width: 320px;
+    background-color: rgb(224, 224, 224);
+    position: absolute;
+    border-radius: 3px;
+    padding: 0 20px 20px 20px;
+    float: right;
+}
+
+.mini-cart-container::after{
+    bottom: 100%;
+    left: 89%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-bottom-color: rgb(224, 224, 224);
+    border-width: 8px;
+    margin-left: -8px;
+    pointer-events: none;
+}
+
+.container{
+    overflow-y: auto;
+    max-height: 55vh;
+    border-top:  2px solid rgb(170, 169, 169);
+    border-bottom:  2px solid rgb(170, 169, 169);
+}
+
+.product-card{
+    border-bottom: 1px solid rgb(170, 169, 169);
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.image{
+    width: 90px;
+}
+
+img{
+    width: 90px;
+}
+
+.top{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    text-align: start;
+    margin-left: 8%;
+    font-weight: 600;
+    padding-bottom: 5%;
+}
+
+.price{
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.delete-btn{
+    cursor: pointer;
+}
+
+.name{
+    margin-bottom: 0.25rem;
+}
+
+.description{
+    color: gray;
+    margin-bottom: 0.5rem;
+    font-size: smaller;
+}
+
+.qty{
+    font-weight: 600;
+}
+
+.total-price{
+    padding-top: 1.25rem;
+    font-weight: 600;
+    display: grid; 
+    grid-template-columns: 50% 50%;
+}
+
+.btns{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+button{
+    width: 70%;
+    margin-left: 15%;
+    cursor: pointer;
+    border: none;
+    padding: 2%;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    letter-spacing: 1px;
+}
+
+button:hover{
+    color: black;
+    background-color: rgb(161, 161, 161);
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-button{
+    background-color: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(199, 199, 199); 
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(190, 190, 190); 
+  }
+  
+  body, html{
+      margin: 0;
+      background-color: rgb(238, 238, 238);
+      font-family: futura-pt,Tahoma,Geneva,Verdana,Arial,sans-serif;
+  }  

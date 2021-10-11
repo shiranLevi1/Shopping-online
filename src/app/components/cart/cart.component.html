@@ -1,0 +1,48 @@
+<div class="cart">
+    <div class="header">
+        <h2>My Cart</h2>
+    </div>
+    <div class="empty-cart" *ngIf="stateService.isEmptyCart">
+        <span>Your cart is empty!</span>
+        <button (click)="onContinueShoppingClicked()" class="start-shopping-btn">TO START SHOPPING</button>
+    </div>
+
+    <div *ngIf="!stateService.isEmptyCart">
+        <div class="top-cart">
+            <button class="clear-cart-btn" (click)="onClearCartClicked()">CLEAR CART</button>
+            <input type="text" class="search-input" placeholder="Search" [(ngModel)]="searchValue" />
+        </div>
+        <div class="cart-container">
+            <div class="product-card" *ngFor="let cartProduct of stateService.cart| cartSearch: searchValue">
+                <div class="image">
+                    <img src="{{stateService.server}}{{cartProduct.image}}" />
+                </div>
+                <div class="product-details">
+                    <div class="top">
+                        <span class="price">{{cartProduct.totalPrice}} ₪</span>
+                        <span class="delete-btn" (click)="onRemoveItemClicked(cartProduct.productId)">X</span>
+                    </div>
+                    <div class="name">
+                        <span> {{cartProduct.productName}}</span><br />
+                    </div>
+                    <div class="description">
+                        <span> {{cartProduct.description}}</span><br />
+                    </div>
+                    <div class="qty-body">
+                        <span class="qty-text">Qty: </span>
+                        <button class="minus-btn"
+                            (click)="onMinusClicked(cartProduct.productId, cartProduct.price)">-</button>
+                        <span class="qty">{{cartProduct.amount}}</span>
+                        <button class="plus-btn"
+                            (click)="onPlusClicked(cartProduct.productId, cartProduct.price)">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="total-price-order">
+            <span>Total Price: </span><span>{{stateService.totalPrice}} ₪</span>
+            <button class="order-btn" (click)="onOrderNowClicked()">ORDER NOW</button>
+            <button class="continue-shopping-btn" (click)="onContinueShoppingClicked()">CONTINUE SHOPPING</button>
+        </div>
+    </div>
+</div>

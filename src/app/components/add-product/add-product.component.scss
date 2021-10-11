@@ -1,0 +1,105 @@
+h3{
+    text-align: center;
+}
+
+.add-btn{
+    cursor: pointer;
+    background-color: white;
+    padding: 0.9rem;
+    height: fit-content;
+}
+
+.add-product{
+    padding-left: 5%;
+}
+
+.add-product-body{
+    border-right: 2px solid black;
+    height: 89vh;
+    background-color: rgb(226, 226, 226);
+}
+
+.input{
+    text-align: start;
+    color: gray;
+    font-weight: 600;
+    font-size: small;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 20%;
+}
+
+input{
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid black;
+    padding: 0.5%;
+    outline: none;
+    width: 70%;
+}
+
+select{
+    width: 71.5%;
+    padding: 0.5%;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.upload-image-btn{
+    background-color: rgb(177, 177, 177);
+    border: none;
+    padding: 2%;
+    color: black;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.upload-image-btn:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+.upload-image-btn:active{
+    background-color: rgb(141, 141, 141);
+}
+
+.add-product-btn{
+    background-color: black;
+    color: white;
+    padding: 2%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 30%;
+}
+
+.add-product-btn:hover{
+    background-color: rgb(85, 85, 85);
+}
+
+.add-product-btn:active{
+    background-color: rgb(58, 58, 58);
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    width: 40%;
+    margin-bottom: 1rem;
+}
+
+.price{
+    width: 20%;
+    margin-left: 1rem;
+}
+
+.error{
+    color: red;
+    font-size: small;
+    text-align: start;
+    margin-left: 20%;
+}
+
+.text{
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1.25rem;
+}

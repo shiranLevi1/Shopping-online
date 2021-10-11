@@ -1,0 +1,24 @@
+<div class="modal">
+    <div class="image">
+        <img src="{{stateService.server}}{{image}}" /><br />
+    </div>
+    <div class="price">
+        <span> {{totalPrice}} ₪</span><br />
+    </div>
+    <div class="name">
+        <span> {{name}}</span><br />
+    </div>
+    <div class="description">
+        <span> {{description}}</span><br />
+    </div>
+    <div class="qty-body">
+        <span class="qty-text">Qty: </span>
+        <button class="minus-plus-btn" (click)="onMinusClicked()">-</button>
+        <span class="qty">{{amount}}</span>
+        <button class="minus-plus-btn" (click)="onPlusClicked()">+</button>
+    </div>
+    <div class="modal-btn">
+        <button class="btn" (click)="onAddClicked()">Add</button>
+        <button class="btn" (click)="onCloseClicked()">close</button>
+    </div>
+</div>

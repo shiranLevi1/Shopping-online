@@ -1,0 +1,20 @@
+<div class="admin-home">
+
+    <div class="add-product">
+        <app-add-product (greetEvent)="addProductSucceed($event)"></app-add-product>
+    </div>
+
+    <div class="home">
+        <div [@fade] *ngIf="isAddProductSucceed" class="alert">
+            <span>Product succespully added!</span>
+        </div>
+        <app-categories-navbar></app-categories-navbar>
+        <div class="admin">
+            <div class="product-container"
+                *ngFor="let product of stateService.products| category: stateService.categoryId| search: stateService.searchValue">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+
+</div>

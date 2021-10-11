@@ -1,0 +1,51 @@
+<div class="order">
+    <h2 class="header">Checkout</h2>
+    <div class="details">
+        <div class="select-shipping-part">
+            <span class="select-shipping-date-text"> Select shipping date: </span>
+            <input type="date" (change)="onShippingDateChanged($event)" />
+            <div class="shipping-date-error">{{shippingDateError}}</div>
+        </div>
+        <div class="user-details">
+            <div class="user-details-header">
+                <span class="user-details-headline">Shipping Details</span>
+                <button class="edit-profile-btn" (click)="onEditDetailsClicked()">Edit Details</button>
+            </div>
+            <div class="user-details-div">{{stateService.userDetails.fullName}}</div><br />
+            <div class="user-details-div">{{stateService.userDetails.city}}</div><br />
+            <div class="user-details-div">{{stateService.userDetails.address}}</div><br />
+        </div>
+        <div class="payment-details">
+            <div class="input">
+                <span class="text">CREDIT CARD NUMBER:</span><br />
+                <input type="number" [(ngModel)]="creditCard" />
+            </div>
+            <div class="credit-card-error">{{creditCardError}}</div>
+            <div class="email">
+                <h5>The receipt will send to: {{stateService.userDetails.email}}</h5>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="order-btn" (click)="onOrderClicked()">PLACE ORDER</button>
+        </div>
+    </div>
+    <div class="products-container">
+        <h2 class="items">{{stateService.cart.length}} Items</h2>
+        <div class="container">
+            <div class="product-card" *ngFor="let cartProduct of stateService.cart">
+                <div class="image">
+                    <img src="{{stateService.server}}{{cartProduct.image}}" />
+                </div>
+                <div class="product-details">
+                    <div class="price">{{cartProduct.totalPrice}} ₪</div>
+                    <div class="name">{{cartProduct.productName}}</div>
+                    <div class="description">{{cartProduct.description}}</div>
+                    <span class="qty">Qty: </span><span>{{cartProduct.amount}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="total-price">
+            <span>Total Price: </span><span>{{stateService.totalPrice}} ₪</span><br />
+        </div>
+    </div>
+</div>

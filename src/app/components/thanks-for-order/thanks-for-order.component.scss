@@ -1,0 +1,75 @@
+.page{
+    width: 70%;
+    margin-left: 15%;
+}
+
+.header{
+    background-color: white;
+    margin: 1.25rem;
+    padding: 2%;
+}
+
+h3{
+    margin-left: 1rem;
+}
+
+.text{
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5%;
+}
+
+.bold-text{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.download-btn{
+    width: 20%;
+    padding: 1%;
+    margin-right: 10%;
+    background-color: rgb(185, 185, 185);
+    color: black;
+}
+
+.download-btn:hover{
+    background-color: rgb(199, 199, 199);
+    color: black;
+}
+
+.order-details-div{
+    text-align: end;
+    color: rgb(119, 119, 119);
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5%;
+}
+
+.order-details{
+    text-align: start;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.btns{
+    background-color: white;
+    margin: 1.25rem;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+button{
+    margin-left: 25%;
+    cursor: pointer;
+    border: none;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    padding: 2.5%;
+    width: 50%;
+    letter-spacing: 1px;
+}
+
+button:hover{
+    background-color: rgb(85, 84, 84);
+}

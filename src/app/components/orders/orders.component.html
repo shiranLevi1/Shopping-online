@@ -1,0 +1,22 @@
+<div *ngIf="!isNoOrders" class="orders">
+    <div class="order-card" *ngFor="let order of allOrders">
+        <h4>Order No.: {{order.order.orderId}}</h4>
+        <span>Order date: {{order.order.orderDate}}</span><br /><br />
+        <span>Total price: {{order.order.totalPrice}} ₪</span><br />
+        <div class="images-container">
+            <div class="image" *ngFor="let product of order.products.slice(0, 3)">
+                <img src="{{stateService.server}}{{product.image}}">
+            </div>
+            <img [src]="image" class="plus-img" *ngIf="order.products.length > 3"
+                (click)="onMoreInfoClicked(order.order.orderId)">
+        </div>
+        <div class="btn">
+            <button (click)="onMoreInfoClicked(order.order.orderId)">VIEW ORDER</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="isNoOrders">
+    <h3>You haven't purchased yet</h3>
+    <button (click)="onStartShoppingClicked()">Start Shopping</button>
+</div>

@@ -1,0 +1,61 @@
+.login{
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.login-body{
+    text-align: center;
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5%;
+}
+
+.input{
+    text-align: start;
+    color: gray;
+    font-weight: 600;
+    font-size: small;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 20%;
+}
+
+input{
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid black;
+    padding: 0.5%;
+    outline: none;
+    width: 70%;
+}
+
+button{
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    width: 35%;
+}
+
+button:hover{
+    background-color: rgb(56, 55, 55);
+}
+
+.link{
+    text-align: start;
+    color: gray;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.error{
+    color: red;
+    font-size: small;
+    text-align: start;
+    margin-left: 20%;
+}

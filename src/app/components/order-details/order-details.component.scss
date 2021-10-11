@@ -1,0 +1,109 @@
+.order-card{
+    width: 60%;
+    margin-left: 20%;
+}
+
+.header{
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5%;
+}
+
+.bold-text{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.order-no-date{
+    color: rgb(119, 119, 119);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5%;
+}
+
+.products-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.product-card{
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.image{
+    grid-column: span 1;
+    border-right: 1px solid rgb(196, 194, 194);
+    width: 90px;
+}
+
+img{
+    width: 90px;
+}
+
+.product-details{
+    margin-left: 2rem;
+    grid-column: span 1;
+}
+
+.shipped-to{
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5% 5% 0 5%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    color: rgb(119, 119, 119);
+}
+
+.price{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.name{
+    margin-bottom: 0.25rem;
+}
+
+.description{
+    color: gray;
+    margin-bottom: 1rem;
+    font-size: smaller;
+}
+
+.qty{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.total-price{
+    background-color: white;
+    margin: 1.25rem;
+    padding: 5% 5% 2% 5%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    font-weight: 600;
+}
+
+.btn{
+    text-align: center;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 2%;
+    width: 50%;
+    margin: 1.25rem;
+}
+
+button:hover{
+    background-color: rgb(56, 55, 55);
+}

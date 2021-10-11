@@ -1,0 +1,18 @@
+<div class="login">
+    <div class="login-body">
+        <h2>Login</h2>
+        <div class="input">
+            <span>EMAIL ADDRESS:</span><br/>
+            <input type="email" placeholder="Email" [(ngModel)]="loginDetails.email" />
+        </div>
+        <div class="input">
+            <span>PASSWORD:</span><br />
+            <input type="password" placeholder="Password" [(ngModel)]="loginDetails.password" />
+        </div>
+        <div class="error">{{error}}</div>
+        <div class="btn">
+            <button type="button" (click)="onLoginClicked()">Login</button><br /><br />
+        </div>
+        <span class="link" (click)="onCreateAccountClicked()">CREATE A NEW ACCOUNT</span>
+    </div>
+</div>

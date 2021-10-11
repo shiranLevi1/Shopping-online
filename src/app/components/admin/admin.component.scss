@@ -1,0 +1,29 @@
+.product-container{
+    display: inline-block;
+    text-align: center;
+    margin: 1.5%;
+}
+
+.admin{
+    margin-left: 1%; 
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.admin-home{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+.alert{
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    width: 20%;
+    text-align: center;
+    background-color: rgb(171, 218, 171);
+    border: 1px solid rgb(94, 163, 94);
+    color: darkgreen;
+    border-radius: 4px;
+    padding: 0.25rem;
+}

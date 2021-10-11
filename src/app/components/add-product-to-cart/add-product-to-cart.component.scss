@@ -1,0 +1,84 @@
+.image{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+img{
+    border-bottom: 1px solid rgb(196, 194, 194);
+    width: 90px;
+}
+
+.description{
+    text-align: start;
+    margin-left: 8%;
+    padding-bottom: 5%;
+    font-size: smaller;
+}
+
+.name{
+    text-align: start;
+    margin-left: 8%;
+    padding-bottom: 5%;
+}
+
+.qty-body{
+    text-align: start;
+    margin-left: 20%;
+    padding-bottom: 1rem;
+}
+
+.qty-text{
+    font-weight: 600;
+}
+
+.qty{
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 0 5% 0 5%;
+    background-color: white;
+}
+
+.price{
+    font-weight: 600;
+    padding-bottom: 1rem;
+    margin-left: 8%;
+}
+
+.minus-plus-btn{
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4%;
+    border: none;
+    background-color: transparent;
+}
+
+.mat-dialog-container{
+    width: 600px !important;
+}
+
+.modal{
+    width: 200px;
+}
+
+.modal-btn{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.btn{
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: none;
+    background-color: rgb(212, 212, 214);
+}
+
+.btn:hover{
+    background-color: rgb(221, 221, 219);
+}
+
+.btn:active{
+    background-color: rgb(139, 139, 139);
+}

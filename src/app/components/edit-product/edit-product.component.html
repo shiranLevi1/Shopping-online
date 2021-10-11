@@ -1,0 +1,36 @@
+<div class="edit-product">
+  <h3>Edit Product</h3>
+  <div class="input">
+    <span>NAME:</span><br />
+    <input type="text" placeholder="Product Name" defaultValue="productData.name" [(ngModel)]="productData.name" />
+  </div>
+  <div class="error">{{productNameError}}</div>
+  <div class="input">
+    <span>DESCRIPTION:</span><br />
+    <input type="text" placeholder="Product Description" defaultValue="productData.description"
+      [(ngModel)]="productData.description" />
+  </div>
+  <div class="error">{{descriptionError}}</div>
+  <div class="input">
+    <span>PRICE:</span>
+    <input class="price" type="number" placeholder="Price" defaultValue="productData.price"
+      [(ngModel)]="productData.price" /> ₪
+  </div>
+  <div class="error">{{priceError}}</div>
+  <div class="input">
+    <span>CATEGORY:</span><br />
+    <select (click)="onCategoryOptionSelected($event)">
+      <option selected>{{categoryName}}</option>
+      <option *ngFor="let category of stateService.categories" [value]="category.categoryId">{{category.categoryName}}
+      </option>
+    </select>
+  </div>
+  <div class="image-div">
+    <div class="image">
+      <img src="{{stateService.server}}{{productData.image}}" />
+    </div>
+    <button class="edit-image-btn" (click)="onFileClicked()">Change Image</button>
+  </div>
+  <input type="file" #fileUpload id="fileUpload" name="fileUpload" style="display: none;" />
+  <button class="save-changes-btn" (click)="onSaveChangesClicked()">Save Changes</button>
+</div>

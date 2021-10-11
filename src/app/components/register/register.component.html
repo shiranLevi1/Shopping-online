@@ -1,0 +1,61 @@
+<div class="register">
+    <div class="register-body">
+        <h2>Register</h2>
+        <div *ngIf="!isNext">
+            <div class="input">
+                <span>EMAIL ADDRESS:</span><br/>
+                <input type="email" placeholder="Email" (change)="onEmailChanged($event)" />
+            </div>
+            <div class="error">{{emailError}}</div>
+            <div class="input">
+                <span>I.D:</span><br />
+                <input type="number" placeholder="I.D" (change)="onIdChanged($event)" />
+            </div>
+            <div class="error">{{idError}}</div>
+            <div class="input">
+                <span>PASSWORD:</span><br />
+                <input type="password" placeholder="Password" [(ngModel)]="registrationData.password" />
+            </div>
+            <div class="error">{{passwordError}}</div>
+            <div class="input">
+                <span>CONFIRM PASSWORD:</span><br />
+                <input type="password" placeholder="Confirm Password" (change)="onConfirmPasswordChanged($event)" />
+            </div>
+            <div class="error">{{confirmedPasswordError}}</div>
+            <button class="next-btn" (click)="onNextClicked()">NEXT</button><br />
+            <span class="link" (click)="onAllreadyRegisteredClicked()">ALLREADY HAVE AN ACCOUNT</span>
+        </div>
+
+        <div *ngIf="isNext">
+            <div class="input">
+                <span>FIRT NAME:</span><br />
+                <input type="text" placeholder="First Name" [(ngModel)]="registrationData.firstName" />
+            </div>
+            <div class="error">{{firstNameError}}</div>
+            <div class="input">
+                <span>LAST NAME:</span><br />
+                <input type="text" placeholder="Last Name" [(ngModel)]="registrationData.lastName" />
+            </div>
+            <div class="error">{{lastNameError}}</div>
+
+            <div class="input">
+                <span>CITY:</span><br />
+                <select (change)="onCityOptionSelected($event)">
+                    <option selected>Select City</option>
+                    <option *ngFor="let city of stateService.cities" [value]="city.name">{{city.name}}</option>
+                </select>
+            </div>
+            <div class="error">{{cityError}}</div>
+
+            <div class="input">
+                <span>ADDRESS:</span><br />
+                <input type="text" placeholder="Address" [(ngModel)]="registrationData.address" />
+            </div>
+            <div class="error">{{addressError}}</div>
+            <div class="btn">
+                <button class="back-btn" (click)="onBackClicked()">back</button>
+                <button class="register-btn" (click)="onRegisterClicked()">Register</button>
+            </div>
+        </div>
+    </div>
+</div>

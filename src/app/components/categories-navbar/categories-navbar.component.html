@@ -1,0 +1,5 @@
+<div class="categories-navbar">
+    <button (click)="onBtnAllClick()">All</button>
+    <button *ngFor="let category of stateService.categories" [value]="category.categoryId"
+        (click)="onCategoryBtnClick($event)">{{category.categoryName}}</button>
+</div>

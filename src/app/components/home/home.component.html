@@ -1,0 +1,14 @@
+<div [ngStyle]="{'display': stateService.isLoggedIn ? 'block' : 'grid'}" class="home-container">
+    <div *ngIf="!stateService.isLoggedIn">
+        <app-about-us class="about-us-component"></app-about-us>
+    </div>
+    <div class="home-component">
+        <app-categories-navbar></app-categories-navbar>
+        <div class="home">
+            <div class="product-container"
+                *ngFor="let product of stateService.products| category: stateService.categoryId| search: stateService.searchValue">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+</div>

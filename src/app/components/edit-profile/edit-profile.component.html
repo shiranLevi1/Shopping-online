@@ -1,0 +1,40 @@
+<div class="edit-profile">
+  <div class="edit-profile-body">
+    <h3>Edit Profile</h3>
+    <div [@fade] *ngIf="isEditSucceed" class="alert">
+      <span>Your details succespully changed!</span>
+    </div>
+    <div class="input">
+      <span>FIRST NAME:</span><br />
+      <input type="text" placeholder="First Name" [(ngModel)]="userData.firstName" defaultValue="userData.firstName" />
+    </div>
+    <div class="error">{{firstNameError}}</div>
+    <div class="input">
+      <span>LAST NAME:</span><br />
+      <input type="text" placeholder="Last Name" [(ngModel)]="userData.lastName" defaultValue="userData.lastName" />
+    </div>
+    <div class="error">{{lastNameError}}</div>
+    <div class="input">
+      <span>EMAIL ADDRESS:</span><br />
+      <input type="email" placeholder="Email" (change)="onEmailChanged()" [(ngModel)]="userData.email"
+        defaultValue="userData.email" />
+    </div>
+    <div class="error">{{emailError}}</div>
+    <div class="input">
+      <span>CITY:</span><br />
+      <select (change)="onCityOptionSelected($event)">
+        <option selected>{{userData.city}}</option>
+        <option *ngFor="let city of stateService.cities" [value]="city.name">{{city.name}}</option>
+      </select>
+    </div>
+    <div class="input">
+      <span>ADDRESS:</span><br />
+      <input type="text" placeholder="Address" [(ngModel)]="userData.address" defaultValue="userData.address" />
+    </div>
+    <div class="error">{{addressError}}</div>
+    <div class="btns">
+      <button (click)="onSaveChangesClicked()">Save Changes</button>
+      <button (click)="onCancelClicked()">Cancel</button>
+    </div>
+  </div>
+</div>

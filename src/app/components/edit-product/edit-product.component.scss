@@ -1,0 +1,99 @@
+.edit-product{
+    padding-left: 5%;
+    width: 300px;
+}
+
+h3{
+    margin-left: 20%;
+}
+
+
+.edit-image-btn{
+    cursor: pointer;
+    background-color: rgb(177, 177, 177);
+    border: none;
+    padding: 2%;
+    width: 50%;
+    height: fit-content;
+    margin-top: 15%;
+    margin-left: 20%;
+}
+
+.edit-image-btn:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+.edit-image-btn:active{
+    background-color: rgb(141, 141, 141);
+}
+
+.save-changes-btn{
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 2%;
+    width: 50%;
+    margin-left: 20%;
+}
+
+.save-changes-btn:hover{
+    background-color: rgb(97, 97, 97);
+}
+
+.save-changes-btn:active{
+    background-color: rgb(63, 63, 63);
+}
+
+.image-div{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-left: 10%;
+    padding: 1rem 0 1rem 0;
+}
+
+.image{
+    width: 90px;
+}
+
+img{
+    width: 90px;
+}
+
+.input{
+    text-align: start;
+    color: gray;
+    font-weight: 600;
+    font-size: small;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    margin-left: 20%;
+}
+
+input{
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    border: 1px solid black;
+    padding: 0.5%;
+    outline: none;
+    width: 70%;
+}
+
+select{
+    width: 71.5%;
+    padding: 0.5%;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.price{
+    width: 20%;
+    margin-left: 1rem;
+}
+
+.error{
+    color: red;
+    font-size: small;
+    text-align: start;
+    margin-left: 20%;
+}
